@@ -2,7 +2,7 @@
   "type": "module",
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/user15213/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/user15213/frontend-project-44/actions)",
+  "description": "[![Actions Status](https://github.com/Resomakar/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Resomakar/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/user15213/frontend-project-44.git"
+    "url": "git+https://github.com/Resomakar/frontend-project-44.git"
   },
-  "author": "",
+  "author": "Resomakar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/user15213/frontend-project-44/issues"
+    "url": "https://github.com/Resomakar/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/user15213/frontend-project-44#readme",
+  "homepage": "https://github.com/Resomakar/frontend-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

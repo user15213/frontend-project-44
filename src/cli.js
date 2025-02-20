@@ -1,8 +1,11 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
 
-const welcomeUser = () => {
-  const name = readlineSync.question('What is your name? ');
-  console.log(`Hello, ${name}! Welcome to the Brain Games!`);
+import readlineSync from "readline-sync";
+
+const makeGreeting = () => {
+  console.log("Welcome to the Brain Games!");
+  const name = readlineSync.question("May I have your name? ");
+  console.log(`Hello, ${name}!`);
 };
 
-export default welcomeUser;
+export default makeGreeting;
