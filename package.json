@@ -6,8 +6,13 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "nyc mocha",
-    "start": "node bin/brain-games.js"
+    "start": "node src/index.js",
+    "brain-even": "node src/brain-even.js",
+    "brain-calc": "node src/brain-calc.js",
+    "brain-gcd": "node src/brain-gcd.js",
+    "brain-progression": "node src/brain-progression.js",
+    "brain-prime": "node src/brain-prime.js",
+    "brain-games": "node bin/brain-games.js"
   },
   "repository": {
     "type": "git",
@@ -35,8 +40,6 @@
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "globals": "^15.15.0",
-    "mocha": "^11.1.0",
-    "nyc": "^17.1.0"
+    "globals": "^15.15.0"
   }
 }
