@@ -23,17 +23,27 @@ jobs:
       # Check-out repository under GitHub workspace
       - uses: actions/checkout@v4
 
-      # Set up Node.js
+      # Set up Node.js with the specified version
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      # Install dependencies
-      - run: npm install
+      # Install dependencies with make
+      - run: make install
 
-      # Run eslint to check the code
-      - run: npm run lint
+      # Lint code with ESLint
+      - run: make lint
 
-      # Optional: If you want to add other steps (например, build), можно добавить сюда
+      # Run tests (this step runs the 'test' command from Makefile)
+      - run: make test
+
+      # Publish code coverage to Code Climate
+      - name: Test & publish code coverage
+        uses: paambaati/codeclimate-action@v5.0.0
+        with:
+          coverageCommand: make report # This assumes you have a 'make report' command in your Makefile to generate the coverage report
+          coverageLocations: ${{github.workspace}}/coverage/lcov-report/index.html # Adjust this if your report path differs
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }} # Add your Code Climate Test Reporter ID in GitHub Secrets

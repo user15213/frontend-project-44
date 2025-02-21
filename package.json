@@ -5,7 +5,9 @@
   "description": "[![Actions Status](https://github.com/Resomakar/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Resomakar/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "nyc mocha",
+    "start": "node bin/brain-games.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,8 @@
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
-    "globals": "^15.15.0"
+    "globals": "^15.15.0",
+    "mocha": "^11.1.0",
+    "nyc": "^17.1.0"
   }
 }
