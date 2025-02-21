@@ -1,5 +1,5 @@
-import useEngineForAllGames from "../index.js";
-import getRandomInt from "../getRandomInt.js";
+import useEngineForAllGames from '../index.js';
+import getRandomInt from '../getRandomInt.js';
 
 const minNumber = 1;
 const maxNumber = 99;
@@ -10,7 +10,7 @@ const isEven = (number) => number % 2 === 0;
 const generateRoundData = () => {
   const number = getRandomInt(minNumber, maxNumber);
   const question = `${number}`;
-  const correctAnswer = isEven(number) ? "yes" : "no";
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };

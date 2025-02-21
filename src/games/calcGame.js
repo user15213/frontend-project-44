@@ -1,19 +1,19 @@
-import useEngineForAllGames from "../index.js";
-import getRandomInt from "../getRandomInt.js";
+import useEngineForAllGames from '../index.js';
+import getRandomInt from '../getRandomInt.js';
 
 const minRandomNumber = 1;
 const maxRandomNumber = 30;
-const arithmeticOperators = ["+", "-", "*"];
+const arithmeticOperators = ['+', '-', '*'];
 
-const gameRulesCalc = "What is the result of the expression?";
+const gameRulesCalc = 'What is the result of the expression?';
 
 const calculateExpression = (num1, operator, num2) => {
   switch (operator) {
-    case "+":
+    case '+':
       return num1 + num2;
-    case "-":
+    case '-':
       return num1 - num2;
-    case "*":
+    case '*':
       return num1 * num2;
     default:
       throw new Error(`Unsupported operator: ${operator}`);

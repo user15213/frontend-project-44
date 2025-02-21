@@ -1,9 +1,9 @@
-import useEngineForAllGames from "../index.js";
-import getRandomInt from "../getRandomInt.js";
+import useEngineForAllGames from '../index.js';
+import getRandomInt from '../getRandomInt.js';
 
 const minNumber = 1;
 const maxNumber = 25;
-const gameRulesGcd = "Find the greatest common divisor of given numbers.";
+const gameRulesGcd = 'Find the greatest common divisor of given numbers.';
 
 const calculateGcd = (num1, num2) => {
   if (num2 === 0) {

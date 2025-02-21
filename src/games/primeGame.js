@@ -1,5 +1,5 @@
-import useEngineForAllGames from "../index.js";
-import getRandomInt from "../getRandomInt.js";
+import useEngineForAllGames from '../index.js';
+import getRandomInt from '../getRandomInt.js';
 
 const minNumber = 1;
 const maxNumber = 50;
@@ -24,7 +24,7 @@ const generateRoundData = () => {
   const number = getRandomInt(minNumber, maxNumber);
 
   const question = `${number}`;
-  const correctAnswer = isPrime(number) ? "yes" : "no";
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
