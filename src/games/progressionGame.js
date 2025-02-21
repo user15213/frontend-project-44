@@ -1,5 +1,5 @@
 import useEngineForAllGames from "../index.js";
-import getRandomInt, { getRandomInt2 } from "../getRandomInt.js";
+import getRandomIntInRange, { getRandomNonNegative } from "../getRandomInt.js";
 
 const minValue = 1;
 const maxValue = 10;
@@ -17,12 +17,12 @@ const generateProgression = (firstItem, step, length) => {
 };
 
 const generateRoundData = () => {
-  const first = getRandomInt(minValue, maxValue);
-  const step = getRandomInt(minValue, maxValue);
-  const length = getRandomInt(minLength, maxLength);
+  const first = getRandomIntInRange(minValue, maxValue);
+  const step = getRandomIntInRange(minValue, maxValue);
+  const length = getRandomIntInRange(minLength, maxLength);
 
   const progression = generateProgression(first, step, length);
-  const randIndex = getRandomInt2(progression.length);
+  const randIndex = getRandomNonNegative() * progression.length;
 
   const correctAnswer = `${progression[randIndex]}`;
   progression[randIndex] = "..";
