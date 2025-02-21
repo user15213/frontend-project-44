@@ -1,27 +1,19 @@
-install:
-  npm ci
+.PHONY: install deps-install deps-update lint publish
 
-brain-progression:
-  node bin/brain-progression.js  
+install: deps-install
+	npx simple-git-hooks
 
-brain-prime:
-  node bin/brain-prime.js  
+run:
+	bin/nodejs-package.js 10
 
-brain-gcd:
-  node bin/brain-gcd.js
+deps-install:
+	npm ci --legacy-peer-deps
 
-brain-games:
-  node bin/brain-games.js
-
-brain-even:
-  node bin/brain-even.js
-
-brain-calc:
-  node bin/brain-calc.js  
-
-publish:
-  npm publish --dry-run
+deps-update:
+	npx ncu -u
 
 lint:
-  npx eslint .
+	npx eslint .
 
+publish:
+	npm publish
