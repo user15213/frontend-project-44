@@ -24,7 +24,7 @@ export default [
       'no-multi-spaces': 'error',
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'space-before-function-paren': ['error', 'never'],
-      'space-before-blocks': ['error', 'never'],
+      'space-before-blocks': ['error', 'always'],
       'space-in-parens': ['error', 'never'],
       'space-infix-ops': 'error',
       'space-unary-ops': [

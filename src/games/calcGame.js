@@ -8,7 +8,7 @@ const arithmeticOperators = ['+', '-', '*'];
 const gameRulesCalc = 'What is the result of the expression?';
 
 const calculateExpression = (num1, operator, num2) => {
-  switch (operator){
+  switch (operator) {
     case '+':
       return num1 + num2;
     case '-':
