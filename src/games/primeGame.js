@@ -3,15 +3,15 @@ import getRandomInt from '../getRandomInt.js';
 
 const minNumber = 1;
 const maxNumber = 50;
-const gameRulesPrime =  'Answer "yes" if given number is prime. Otherwise answer "no"';
+const gameRulesPrime = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = (num) => {
-  if (num < 2) {
+  if (num < 2){
     return false;
   }
 
-  for (let i = 2; i <= Math.sqrt(num); i += 1) {
-    if (num % i === 0) {
+  for (let i = 2; i <= Math.sqrt(num); i += 1){
+    if (num % i === 0){
       return false;
     }
   }

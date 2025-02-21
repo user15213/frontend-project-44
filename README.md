@@ -11,6 +11,12 @@ A collection of console games built with Node.js.
 - Node.js version: 14.0 or higher
 - npm version: 6.0 or higher
 
+1. Brain Calc: solve simple arithmetic problems.
+2. Brain Even: determine if a number is even or odd.
+3. Brain GCD: find the greatest common divisor of two numbers.
+4. Brain Prime: check if a number is prime.
+5. Brain Progression: identify the missing number in a sequence.
+
 ## Installation and Setup
 
 Following commands:

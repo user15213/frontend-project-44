@@ -20,6 +20,30 @@ export default [
       'operator-linebreak': ['error', 'after', { overrides: { '=': 'none' } }],
       'implicit-arrow-linebreak': ['error', 'beside'],
       'jsx-quotes': ['error', 'prefer-single'],
+      'no-trailing-spaces': 'error',
+      'no-multi-spaces': 'error',
+      'no-multiple-empty-lines': ['error', { max: 1 }],
+      'space-before-function-paren': ['error', 'never'],
+      'space-before-blocks': ['error', 'never'],
+      'space-in-parens': ['error', 'never'],
+      'space-infix-ops': 'error',
+      'space-unary-ops': [
+        'error',
+        {
+          words: true,
+          nonwords: false,
+        },
+      ],
+      'spaced-comment': ['error', 'always'],
+      'semi-spacing': [
+        'error',
+        {
+          before: false,
+          after: true,
+        },
+      ],
+      'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+      'no-whitespace-before-property': 'error',
     },
   },
 ];

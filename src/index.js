@@ -9,13 +9,13 @@ const useEngineForAllGames = (gameDescription, getRoundData) => {
   console.log(`Hello, ${userName}!`);
   console.log(gameDescription);
 
-  for (let i = 0; i < roundsCount; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1){
     const [question, correctAnswer] = getRoundData();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer !== correctAnswer) {
+    if (userAnswer !== correctAnswer){
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
