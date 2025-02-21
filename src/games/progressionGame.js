@@ -1,8 +1,10 @@
-#!/usr/bin/env node
-
 import useEngineForAllGames from "../index.js";
 import getRandomInt, { getRandomInt2 } from "../getRandomInt.js";
 
+const minValue = 1;
+const maxValue = 10;
+const minLength = 5;
+const maxLength = 10;
 const gameRulesProgression = "What number is missing in the progression?";
 
 const generateProgression = (firstItem, step, length) => {
@@ -14,10 +16,10 @@ const generateProgression = (firstItem, step, length) => {
   return array;
 };
 
-const startRoundProgression = () => {
-  const first = getRandomInt(1, 10);
-  const step = getRandomInt(1, 10);
-  const length = getRandomInt(5, 10);
+const generateRoundData = () => {
+  const first = getRandomInt(minValue, maxValue);
+  const step = getRandomInt(minValue, maxValue);
+  const length = getRandomInt(minLength, maxLength);
 
   const progression = generateProgression(first, step, length);
   const randIndex = getRandomInt2(progression.length);
@@ -31,6 +33,6 @@ const startRoundProgression = () => {
 };
 
 const playProgressionGame = () =>
-  useEngineForAllGames(gameRulesProgression, startRoundProgression);
+  useEngineForAllGames(gameRulesProgression, generateRoundData);
 
 export default playProgressionGame;

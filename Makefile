@@ -1,10 +1,7 @@
-.PHONY: install deps-install deps-update lint publish
+.PHONY: install deps-install deps-update lint publish test
 
 install: deps-install
 	npx simple-git-hooks
-
-run:
-	bin/nodejs-package.js 10
 
 deps-install:
 	npm ci --legacy-peer-deps
@@ -14,6 +11,9 @@ deps-update:
 
 lint:
 	npx eslint .
+
+test:
+	npm test
 
 publish:
 	npm publish

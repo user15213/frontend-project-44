@@ -5,6 +5,7 @@
   "description": "[![Actions Status](https://github.com/Resomakar/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Resomakar/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
     "lint": "npx eslint .",
     "start": "node src/index.js",
     "brain-even": "node src/brain-even.js",

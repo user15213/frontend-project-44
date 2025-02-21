@@ -1,6 +1,6 @@
-const getRandomInt = (min, max) =>
+const getRandomIntInRange = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
-export const getRandomInt2 = () => Math.floor(Math.random());
+export const getRandomNonNegative = () => Math.floor(Math.random());
 
-export default getRandomInt;
+export default getRandomIntInRange;

@@ -1,12 +1,12 @@
-#!/usr/bin/env node
-
 import useEngineForAllGames from "../index.js";
 import getRandomInt from "../getRandomInt.js";
 
+const minNumber = 1;
+const maxNumber = 50;
 const gameRulesPrime =
   'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-const primeNumber = (num) => {
+const isPrime = (num) => {
   if (num < 2) {
     return false;
   }
@@ -20,16 +20,16 @@ const primeNumber = (num) => {
   return true;
 };
 
-const startRoundPrime = () => {
-  const number = getRandomInt(1, 50);
+const generateRoundData = () => {
+  const number = getRandomInt(minNumber, maxNumber);
 
   const question = `${number}`;
-  const correctAnswer = primeNumber(number) ? "yes" : "no";
+  const correctAnswer = isPrime(number) ? "yes" : "no";
 
   return [question, correctAnswer];
 };
 
 const playPrimeGame = () =>
-  useEngineForAllGames(gameRulesPrime, startRoundPrime);
+  useEngineForAllGames(gameRulesPrime, generateRoundData);
 
 export default playPrimeGame;

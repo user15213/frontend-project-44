@@ -1,13 +1,13 @@
-#!/usr/bin/env node
-
 import useEngineForAllGames from "../index.js";
 import getRandomInt from "../getRandomInt.js";
 
+const minRandomNumber = 1;
+const maxRandomNumber = 30;
+const arithmeticOperators = ["+", "-", "*"];
+
 const gameRulesCalc = "What is the result of the expression?";
 
-const signOfArithmetic = ["+", "-", "*"];
-
-const expression = (num1, operator, num2) => {
+const calculateExpression = (num1, operator, num2) => {
   switch (operator) {
     case "+":
       return num1 + num2;
@@ -16,22 +16,23 @@ const expression = (num1, operator, num2) => {
     case "*":
       return num1 * num2;
     default:
-      return null;
+      throw new Error(`Unsupported operator: ${operator}`);
   }
 };
 
-const startRound = () => {
-  const num1 = getRandomInt(1, 30);
-  const num2 = getRandomInt(1, 30);
+const generateRoundData = () => {
+  const num1 = getRandomInt(minRandomNumber, maxRandomNumber);
+  const num2 = getRandomInt(minRandomNumber, maxRandomNumber);
   const randomOperator =
-    signOfArithmetic[getRandomInt(0, signOfArithmetic.length - 1)];
+    arithmeticOperators[getRandomInt(0, arithmeticOperators.length - 1)];
 
   const question = `${num1} ${randomOperator} ${num2}`;
-  const correctAnswer = `${expression(num1, randomOperator, num2)}`;
+  const correctAnswer = `${calculateExpression(num1, randomOperator, num2)}`;
 
   return [question, correctAnswer];
 };
 
-const playCalcGame = () => useEngineForAllGames(gameRulesCalc, startRound);
+const playCalcGame = () =>
+  useEngineForAllGames(gameRulesCalc, generateRoundData);
 
 export default playCalcGame;
