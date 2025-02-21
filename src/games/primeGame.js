@@ -3,8 +3,7 @@ import getRandomInt from '../getRandomInt.js';
 
 const minNumber = 1;
 const maxNumber = 50;
-const gameRulesPrime =
-  'Answer "yes" if given number is prime. Otherwise answer "no"';
+const gameRulesPrime =  'Answer "yes" if given number is prime. Otherwise answer "no"';
 
 const isPrime = (num) => {
   if (num < 2) {
@@ -29,7 +28,6 @@ const generateRoundData = () => {
   return [question, correctAnswer];
 };
 
-const playPrimeGame = () =>
-  useEngineForAllGames(gameRulesPrime, generateRoundData);
+const playPrimeGame = () => useEngineForAllGames(gameRulesPrime, generateRoundData);
 
 export default playPrimeGame;

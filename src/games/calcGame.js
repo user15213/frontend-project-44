@@ -23,8 +23,7 @@ const calculateExpression = (num1, operator, num2) => {
 const generateRoundData = () => {
   const num1 = getRandomInt(minRandomNumber, maxRandomNumber);
   const num2 = getRandomInt(minRandomNumber, maxRandomNumber);
-  const randomOperator =
-    arithmeticOperators[getRandomInt(0, arithmeticOperators.length - 1)];
+  const randomOperator =    arithmeticOperators[getRandomInt(0, arithmeticOperators.length - 1)];
 
   const question = `${num1} ${randomOperator} ${num2}`;
   const correctAnswer = `${calculateExpression(num1, randomOperator, num2)}`;
@@ -32,7 +31,6 @@ const generateRoundData = () => {
   return [question, correctAnswer];
 };
 
-const playCalcGame = () =>
-  useEngineForAllGames(gameRulesCalc, generateRoundData);
+const playCalcGame = () => useEngineForAllGames(gameRulesCalc, generateRoundData);
 
 export default playCalcGame;

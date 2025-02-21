@@ -17,6 +17,9 @@ export default [
       quotes: ['error', 'single', { avoidEscape: true }],
       'no-console': 'off',
       'no-alert': 'warn',
+      'operator-linebreak': ['error', 'after', { overrides: { '=': 'none' } }],
+      'implicit-arrow-linebreak': ['error', 'beside'],
+      'jsx-quotes': ['error', 'prefer-single'],
     },
   },
 ];
